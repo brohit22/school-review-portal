@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import connectDB from './config/db.js'; // Add ".js" as the file extension
+import connectDB from './config/db.js'; // Add ".js" for ES module import
 import authRoutes from './routes/auth.js';
 import schoolRoutes from './routes/school.js';
 
@@ -12,7 +12,6 @@ const app = express();
 // Connect to MongoDB
 connectDB();
 
-// Middleware
 app.use(cors());
 app.use(express.json());
 
