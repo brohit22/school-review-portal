@@ -12,6 +12,7 @@ const Home = () => {
       state: "Karnataka",
       city: "Bangalore",
       fees: 150000,
+      categoryRatings: { academic: 4 },
     },
     {
       _id: "2",
@@ -19,6 +20,7 @@ const Home = () => {
       state: "Delhi",
       city: "New Delhi",
       fees: 120000,
+      categoryRatings: { academic: 5 },
     },
     {
       _id: "3",
@@ -26,6 +28,7 @@ const Home = () => {
       state: "Maharashtra",
       city: "Mumbai",
       fees: 180000,
+      categoryRatings: { academic: 3 },
     },
     {
       _id: "4",
@@ -33,6 +36,7 @@ const Home = () => {
       state: "Uttar Pradesh",
       city: "Lucknow",
       fees: 110000,
+      categoryRatings: { academic: 4 },
     },
     {
       _id: "5",
@@ -40,6 +44,7 @@ const Home = () => {
       state: "Maharashtra",
       city: "Pune",
       fees: 200000,
+      categoryRatings: { academic: 5 },
     },
   ]);
 
@@ -62,15 +67,15 @@ const Home = () => {
   });
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="flex flex-col h-screen">
       {/* Hero Section with Background Image */}
       <div
-        className="relative bg-cover bg-center h-screen"
+        className="relative flex-grow bg-cover bg-center"
         style={{ backgroundImage: `url(${backgroundImage})` }}
       >
         <div className="absolute inset-0 bg-black bg-opacity-50"></div>{" "}
         {/* Dark overlay */}
-        <div className="relative z-10 text-center text-white pt-20">
+        <div className="relative z-10 text-center text-white pt-5">
           <h1 className="text-4xl font-bold mb-4">
             Find Over 25000 Schools in India
           </h1>
@@ -128,7 +133,7 @@ const Home = () => {
           </div>
         </div>
         {/* School List */}
-        <div className="container mx-auto p-6">
+        <div className="container mx-auto mb-2">
           <div className="flex justify-center items-center">
             {/* Filtered school cards */}
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -145,27 +150,29 @@ const Home = () => {
       </div>
 
       {/* Boards Section */}
-      <div className="flex justify-center py-4 bg-gray-100">
-        <div className="flex space-x-4 text-sm">
-          <a href="#" className="hover:underline">
-            All Boards
-          </a>
-          <a href="#" className="hover:underline">
-            SSC
-          </a>
-          <a href="#" className="hover:underline">
-            ICSE
-          </a>
-          <a href="#" className="hover:underline">
-            CBSE
-          </a>
-          <a href="#" className="hover:underline">
-            State Board
-          </a>
-          <a href="#" className="hover:underline">
-            IB
-          </a>
-          {/* Add more boards as per your requirement */}
+      <div className="bg-gray-100 py-2">
+        <div className="flex justify-center py-2">
+          <div className="flex space-x-4 text-sm">
+            <a href="#" className="hover:underline">
+              All Boards
+            </a>
+            <a href="#" className="hover:underline">
+              SSC
+            </a>
+            <a href="#" className="hover:underline">
+              ICSE
+            </a>
+            <a href="#" className="hover:underline">
+              CBSE
+            </a>
+            <a href="#" className="hover:underline">
+              State Board
+            </a>
+            <a href="#" className="hover:underline">
+              IB
+            </a>
+            {/* Add more boards as per your requirement */}
+          </div>
         </div>
       </div>
     </div>

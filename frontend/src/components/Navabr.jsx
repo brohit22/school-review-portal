@@ -3,7 +3,7 @@ import { FaHome } from "react-icons/fa"; // Import Home icon from react-icons
 
 const Navbar = () => {
   return (
-    <nav className="bg-green-600 text-white h-2/6 shadow-md">
+    <nav className="bg-green-600 text-white py-1 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <div className="p-2 flex items-center">
