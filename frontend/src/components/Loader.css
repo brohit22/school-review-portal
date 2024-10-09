@@ -1,0 +1,29 @@
+/* src/components/Loader.css */
+.typing-animation {
+  display: inline-block;
+  border-right: 2px solid gray; /* Cursor */
+  white-space: nowrap; /* Prevents wrapping */
+  overflow: hidden; /* Hides the text */
+  animation: typing 4s steps(10, end), blink 0.75s step-end infinite; /* Combined animations */
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0; /* Start with no width */
+  }
+  to {
+    width: 100%; /* End with full width */
+  }
+}
+
+/* Cursor blinking effect */
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent; /* Invisible */
+  }
+  50% {
+    border-color: gray; /* Visible */
+  }
+}
